@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" href="css/form.css">
+	<link rel="stylesheet" href="js/main.js">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js?ver=1.11.3" id="jquery-js"></script>
+
+</head>
+<body>
+	<div class="site-main">
+		<div class="container">
+			<div class="content row">
+				<main class="main col-sm-12" role="main">
+					<div id="mattress-builder-app">
+						<div>
+							<h1 class="unhide">This is extra content above the mattress builder!</h1>
+							<div class="App">
+								<aside id="mattress-builder__sidebar">
+									<h2 class="mb-sidebar__header">Build Your Mattress</h2>
+									<div class="mb-sidebar__content">
+										<div class="accordion-section">
+											<div class="uk-accordion" data-uk-accordion="">
+												<div class="uk-accordion-single">
+													<h3 class="uk-accordion-title">Quality</h3>
+													<div aria-expanded="false" data-wrapper="true">
+														<div class="uk-accordion-content">
+															<div class="mb-quality-options step-message-container">
+																<h3 class="mb-sidebar-section-title mb-desktop-only"><span class="arrow-before"></span> Quality</h3>
+																<p class="small"><b>Step 1:</b> Select your mattress type:</p>
+																<div class="mb-quality-options__mattresses">
+																	<div class="mb-quality-options__mattress">
+																		<button class="quality-option" type="button"><img alt="Journey" src="https://www.tochta.com/wp-content/uploads/2019/04/Journey-1-1-e1555435708338.png">
+																		<div>
+																			Journey
+																		</div></button>
+																		<p>Amazing Value. Great Quality.</p>
+																	</div>
+																	<div class="mb-quality-options__mattress">
+																		<button class="quality-option active" type="button"><img alt="Utopia" src="https://www.tochta.com/wp-content/uploads/2019/04/Utopia-1-e1555435749221.png">
+																		<div>
+																			Utopia
+																		</div></button>
+																		<p>Premium Luxury Mattress.</p>
+																	</div>
+																	<div class="mb-quality-options__mattress">
+																		<button class="quality-option" type="button"><img alt="Divini" src="https://www.tochta.com/wp-content/uploads/2019/04/divini-e1555702167256.png">
+																		<div>
+																			Divini
+																		</div></button>
+																		<p>Dual Zone Adjustable Mattress.</p>
+																	</div>
+																</div>
+																<p class="text-center"><a class="clear" data-uk-modal="{target: '#compare-mattresses-modal'}">Compare Mattresses</a></p>
+																<div class="step-message">
+																	<h3><span class="arrow-left"></span> Select Your Mattress Quality</h3>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="uk-accordion-single">
+													<h3 class="uk-accordion-title">Sizing</h3>
+													<div aria-expanded="false" data-wrapper="true">
+														<div class="uk-accordion-content">
+															<div class="mb-sizing-options step-message-container">
+																<p class="small"><b>Step 2:</b> Select your mattress size</p>
+																<p class="text-center"><a class="clear" data-uk-modal="{target: '#standard-sizes-modal'}">Standard Bed Sizes</a></p>
+																<h3 class="mb-sidebar-section-title mb-desktop-only"><span class="arrow-before"></span> Sizing</h3>
+																<div class="mb-sizing-input-wrap mb-sizing-input-wrap--width">
+																	<label class="mb-size-control__label">Width:</label><input class="mb-size-control__input" type="number" value="60">
+																	<div class="mb-size-control__helper-text">
+																		inches
+																	</div>
+																</div>
+																<div class="mb-sizing-input-wrap mb-sizing-input-wrap--length">
+																	<label class="mb-size-control__label">Length:</label><input class="mb-size-control__input" type="number" value="80">
+																	<div class="mb-size-control__helper-text">
+																		inches
+																	</div>
+																</div>
+																<div class="mb-sizing-input-wrap mb-sizing-input-wrap--thickness">
+																	<label class="mb-size-control__label">Thickness:</label><input class="mb-size-control__input" type="number" value="10">
+																	<div class="mb-size-control__helper-text">
+																		inches
+																	</div>
+																</div>
+																<p class="text-center"><a class="clear" data-uk-modal="{target: '#thickness-options-modal'}">What thickness should I get?</a></p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="mb-desktop-only">
+											<div class="price-container">
+												SALE: <span class="total-price"><del>$1601</del></span> <span class="total-price text-primary">$961</span>
+											</div>
+											<div class="add-to-cart-wrap">
+												<button class="button success" type="button">Add to Cart</button>
+												<p><span>Free Shipping</span></p>
+											</div>
+										</div>
+									</div>
+								</aside>
+								<div class="mattress-builder__main-content">
+									<div class="main-title-wrap">
+										<h3><b>Step 3 (Optional):</b><br>
+										Add Custom Corner Cuts</h3><a class="clear" data-uk-modal="{target: '#measuring-modal'}">Need Help Measuring?</a>
+									</div>
+									<div class="canvas-app">
+										<div class="responsive-canvas-wrap" id="canvas-wrap" style="width: 100%; max-width: 400px;">
+											<div>
+												<div class="konvajs-content" role="presentation" style="position: relative; user-select: none; width: 400px; height: 507.692px;">
+													<canvas height="507" style="padding: 0px; margin: 0px; border: 0px; background: transparent; position: absolute; top: 0px; left: 0px; width: 400px; height: 507.692px; display: block;" width="399"></canvas>
+													<canvas height="507" style="padding: 0px; margin: 0px; border: 0px; background: transparent; position: absolute; top: 0px; left: 0px; width: 400px; height: 507.692px; display: block;" width="399"></canvas>
+												</div>
+											</div>
+										</div>
+										<div class="corner-controls">
+											<div class="corner-control--wrap topLeft--wrap">
+												<label for="corner--topLeft">Top Left</label><select id="corner--topLeft" name="topLeft">
+													<option value="none">
+														None
+													</option>
+													<option value="angle">
+														Angle
+													</option>
+													<option value="notch">
+														Notch
+													</option>
+													<option value="radius">
+														Radius
+													</option>
+												</select>
+											</div>
+											<div class="corner-control--wrap topRight--wrap">
+												<label for="corner--topRight">Top Right</label><select id="corner--topRight" name="topRight">
+													<option value="none">
+														None
+													</option>
+													<option value="angle">
+														Angle
+													</option>
+													<option value="notch">
+														Notch
+													</option>
+													<option value="radius">
+														Radius
+													</option>
+												</select>
+											</div>
+											<div class="corner-control--wrap bottomLeft--wrap">
+												<label for="corner--bottomLeft">Bottom Left</label><select id="corner--bottomLeft" name="bottomLeft">
+													<option value="none">
+														None
+													</option>
+													<option value="angle">
+														Angle
+													</option>
+													<option value="notch">
+														Notch
+													</option>
+													<option value="radius">
+														Radius
+													</option>
+												</select>
+											</div>
+											<div class="corner-control--wrap bottomRight--wrap">
+												<label for="corner--bottomRight">Bottom Right</label><select id="corner--bottomRight" name="bottomRight">
+													<option value="none">
+														None
+													</option>
+													<option value="angle">
+														Angle
+													</option>
+													<option value="notch">
+														Notch
+													</option>
+													<option value="radius">
+														Radius
+													</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="save-changes-wrap">
+										<a class="btn text-white btn-primary btn-lg mt-3 mb-2 mt-lg-2 mb-lg-0 shadow">Save Changes To Cuts</a>
+									</div>
+									<div class="mb-mobile-only">
+										<div class="price-container">
+											SALE: <span class="total-price"><del>$1601</del></span> <span class="total-price text-primary">$961</span>
+										</div>
+										<div class="add-to-cart-wrap">
+											<button class="button success" type="button">Add to Cart</button>
+											<p><span>Free Shipping</span></p>
+										</div>
+									</div>
+									<div class="uk-modal" id="standard-sizes-modal">
+										<div class="uk-modal-dialog uk-modal-dialog-large">
+											<a class="uk-modal-close uk-close"></a>
+											<div class="modal-sidebar">
+												<div>
+													<button class="button secondary uk-modal-close" type="button">Cancel</button>
+												</div>
+											</div>
+											<div class="modal-content">
+												<ul class="no-bullet mb-mattress-sizes-grid">
+													<li class="mb-mattress-sizes-grid__item"><button class="uk-modal-close" type="button">
+													<div><img src="https://www.tochta.com/wp-content/themes/Tochta-2017/bedcustomizer/images/twin-3d-color.png"></div>
+													<p>RV Bunk</p>
+													<p>34" x 74"</p></button></li>
+													<li class="mb-mattress-sizes-grid__item"><button class="uk-modal-close" type="button">
+													<div><img src="https://www.tochta.com/wp-content/themes/Tochta-2017/bedcustomizer/images/twin-3d-color.png"></div>
+													<p>Twin</p>
+													<p>38" x 74"</p></button></li>
+													<li class="mb-mattress-sizes-grid__item"><button class="uk-modal-close" type="button">
+													<div><img src="https://www.tochta.com/wp-content/themes/Tochta-2017/bedcustomizer/images/twin-3d-color.png"></div>
+													<p>Twin XL</p>
+													<p>38" x 80"</p></button></li>
+													<li class="mb-mattress-sizes-grid__item"><button class="uk-modal-close" type="button">
+													<div><img src="https://www.tochta.com/wp-content/themes/Tochta-2017/bedcustomizer/images/full-3d-color.png"></div>
+													<p>RV Full</p>
+													<p>48" x 74"</p></button></li>
+													<li class="mb-mattress-sizes-grid__item"><button class="uk-modal-close" type="button">
+													<div><img src="https://www.tochta.com/wp-content/themes/Tochta-2017/bedcustomizer/images/full-3d-color.png"></div>
+													<p>Full</p>
+													<p>53" x 74"</p></button></li>
+													<li class="mb-mattress-sizes-grid__item"><button class="uk-modal-close" type="button">
+													<div><img src="https://www.tochta.com/wp-content/themes/Tochta-2017/bedcustomizer/images/full-3d-color.png"></div>
+													<p>Full XL</p>
+													<p>53" x 80"</p></button></li>
+													<li class="mb-mattress-sizes-grid__item"><button class="uk-modal-close" type="button">
+													<div><img src="https://www.tochta.com/wp-content/themes/Tochta-2017/bedcustomizer/images/queen-3d-color.png"></div>
+													<p>RV Queen</p>
+													<p>60" x 74"</p></button></li>
+													<li class="mb-mattress-sizes-grid__item"><button class="uk-modal-close active" type="button">
+													<div><img src="https://www.tochta.com/wp-content/themes/Tochta-2017/bedcustomizer/images/queen-3d-color.png"></div>
+													<p>Queen</p>
+													<p>60" x 80"</p></button></li>
+													<li class="mb-mattress-sizes-grid__item"><button class="uk-modal-close" type="button">
+													<div><img src="https://www.tochta.com/wp-content/themes/Tochta-2017/bedcustomizer/images/king-3d-color.png"></div>
+													<p>RV King</p>
+													<p>72" x 78"</p></button></li>
+													<li class="mb-mattress-sizes-grid__item"><button class="uk-modal-close" type="button">
+													<div><img src="https://www.tochta.com/wp-content/themes/Tochta-2017/bedcustomizer/images/king-3d-color.png"></div>
+													<p>Short King</p>
+													<p>72" x 80"</p></button></li>
+													<li class="mb-mattress-sizes-grid__item"><button class="uk-modal-close" type="button">
+													<div><img src="https://www.tochta.com/wp-content/themes/Tochta-2017/bedcustomizer/images/cal-king-3d-color.png"></div>
+													<p>Eastern King</p>
+													<p>76" x 80"</p></button></li>
+													<li class="mb-mattress-sizes-grid__item"><button class="uk-modal-close" type="button">
+													<div><img src="https://www.tochta.com/wp-content/themes/Tochta-2017/bedcustomizer/images/cal-king-3d-color.png"></div>
+													<p>California King</p>
+													<p>72" x 84"</p></button></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="uk-modal" id="thickness-options-modal">
+									<div class="uk-modal-dialog">
+										<a class="uk-modal-close uk-close"></a>
+										<div class="modal-sidebar">
+											<h4>Thickness Info</h4>
+										</div>
+										<div class="modal-content">
+											<p>We can make any thickness from 4" - 10" (In full inch increments, no 1/2 inches)</p>
+											<p>The recommended thickness for optimum comfort is 9"-10".</p>
+											<p>Other thicknesses from 4"- 8" are usually for special circumstances that require a thinner mattress (ie: overhead cabinets, windows, light switches, sofa sleepers, bunk beds, etc) but will still offer premium support and comfort even at these thinner sizes.</p>
+										</div>
+									</div>
+								</div>
+								<div class="uk-modal" id="quality-description-modal">
+									<div class="uk-modal-dialog">
+										<a class="uk-modal-close uk-close"></a>
+										<div class="modal-content">
+											<div class="row">
+												<div class="medium-5 columns"><img alt="" class="alignnone size-full wp-image-544" height="409" src="/wp-content/uploads/2017/07/Journey.png" width="600"></div>
+												<div class="medium-7 columns">
+													<h3>Journey</h3>
+													<ul>
+														<li>Gel Visco Comfort</li>
+														<li>3 layer construction</li>
+														<li>Amazing value</li>
+													</ul><a href="/journey/" target="_blank">More Details <i class="fa fa-caret-right"></i></a>
+												</div>
+											</div>
+											<hr>
+											<div class="row">
+												<div class="medium-5 columns"><img alt="" class="alignnone size-full wp-image-541" height="401" src="/wp-content/uploads/2017/07/Cortana.png" width="600"></div>
+												<div class="medium-7 columns">
+													<h3>Cortana</h3>
+													<ul>
+														<li>Latex comfort layer</li>
+														<li>Bounce and firmness at the surface</li>
+														<li>3 layer luxury firm mattress</li>
+													</ul><a href="/cortana/" target="_blank">More Details <i class="fa fa-caret-right"></i></a>
+												</div>
+											</div>
+											<hr>
+											<div class="row">
+												<div class="medium-5 columns"><img alt="" class="alignnone size-full wp-image-545" height="408" src="/wp-content/uploads/2017/07/Utopia.png" width="600"></div>
+												<div class="medium-7 columns">
+													<h3>Utopia</h3>
+													<ul>
+														<li>Premium comfort, supportive and responsive</li>
+														<li>“Quick recovery” Cooling &amp; supportive Gel Memory foam</li>
+														<li>Latex transition layer adds “bounce” and support</li>
+														<li>4 Layer system provides firm support and luxury comfort</li>
+													</ul><a href="/utopia/" target="_blank">More Details <i class="fa fa-caret-right"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="uk-modal" id="compare-mattresses-modal">
+									<div class="uk-modal-dialog">
+										<a class="uk-modal-close uk-close"></a>
+										<div class="modal-sidebar">
+											<h4><u>Compare Mattresses</u></h4>
+										</div>
+										<h5>Journey Mattress</h5>
+										<div class="row">
+											<div class="col-sm-5 order-1 order-sm-2"><img alt="" class="alignnone size-medium wp-image-6645" height="300" src="/wp-content/uploads/2019/03/Journey-300x300.jpg" width="300"></div>
+											<div class="col-sm-7 order-2 order-sm-1">
+												<p>A cost friendly mattress comparable to other online brands</p>
+												<ul>
+													<li>Comfort and value</li>
+													<li>High density foams will not sag</li>
+													<li>Cooling Gel visco comfort layer</li>
+													<li>Factory Direct pricing</li>
+													<li>Made in USA</li>
+													<li>CertiPUR-US® Certified foams</li>
+												</ul><a class="mb-2" href="/product/journey-mattress" target="_blank">Read more here</a>
+											</div>
+										</div>
+										<h5>Utopia Mattress</h5>
+										<div class="row">
+											<div class="col-sm-5 order-1 order-sm-2"><img alt="" class="alignnone size-medium wp-image-44" height="200" src="/wp-content/uploads/2019/04/Utopia-1-e1555435749221-300x200.png" width="300"></div>
+											<div class="col-sm-7 order-2 order-sm-1">
+												<p>A true luxury mattress at a fraction of the cost!</p>
+												<ul>
+													<li>Premium soft comfort</li>
+													<li>Instant and reliable support.</li>
+													<li>Cooling “Dual phase change” foam that actually works! This premium layer will always have you sleeping at the perfect temperature.</li>
+													<li>Adjusts to curves of your body, relieving pressure points</li>
+													<li>CertiPUR-US® Certified foams</li>
+												</ul><a class="mb-2" href="/product/utopia-mattress" target="_blank">Read more here</a>
+											</div>
+										</div>
+										<h5>Divini Mattress</h5>
+										<div class="row">
+											<div class="col-sm-5 order-1 order-sm-2"><img alt="" class="alignnone size-medium wp-image-318" height="200" src="/wp-content/uploads/2019/04/divini-e1555702167256-300x200.png" width="300"></div>
+											<div class="col-sm-7 order-2 order-sm-1">
+												<p>It’s time to end the “One size fits all” sleep industry mentality.</p>
+												<p>Divini is a patent pending, dual zone mattress, which is 100% customizable at home, to meet the needs of every sleeper, and create your own perfect comfort level.</p>
+												<ul>
+													<li>Split side firmness customization</li>
+													<li>Premium “quick recovery” cooling comfort layer (soft &amp; supportive comfort)</li>
+													<li>Firm edge support system. No more “roll off” dilemma</li>
+													<li>High density support layers (Soft, Medium, Firm)</li>
+													<li>9 different firmness levels</li>
+													<li>Forever customizable</li>
+												</ul>
+												<p>Available in all standard sizes (8” or 10” thick) Available in virtually ANY custom size and/or shape too! Build yours on our custom mattress builder now.</p><a class="mb-2" href="/product/divini-mattress" target="_blank">Read more here</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="uk-modal" id="measuring-modal">
+									<div class="uk-modal-dialog">
+										<a class="uk-modal-close uk-close"></a>
+										<div class="modal-sidebar">
+											<h4><u>Need help measuring?</u></h4>
+										</div>
+										<p>When ordering a mattress with a special corner cut (Radius, Angled, or Notched), there are 2 boxes per corner that require measurement entry. These measurements represent the distance being removed from the corner being cut off, along each side.</p>
+										<p>Sometimes it's hard to know what that measurement is, so here is an easy way to get it</p>
+										<p><span class="text-uppercase"><u>Example:</u></span><br>
+										If the overall dimensions of your mattress were 60" x 74", and you had a special cut corner (radius, angle, or notch) at the foot of the mattress, you would need to enter 2 measurements for that corner.</p>
+										<p>If you measured from the head of the mattress, down to where the special corner (radius, angle, or notch) starts, and that measurement was 59", then you would enter 15" in the box for that side (74" - 59" = 15").</p>
+										<p>Repeat the process for the other box. For example, if you measured from the side of the mattress to where the special corner cut starts, and you measured 53", then you would enter 7" in the required box (60" - 53" = 7").</p><img src="/wp-content/uploads/notch.png">
+										<p>If you still have questions, please feel free to call us at <a data-ctm-tracked="1" data-ctm-watch-id="1" href="tel:+18886901081">888-690-1081</a> (Mon-Fri, 8am-4pm PST) and we'd be happy to help!</p>
+									</div>
+								</div>
+								<div class="uk-modal" id="firmness-modal">
+									<div class="uk-modal-dialog">
+										<a class="uk-modal-close uk-close"></a>
+										<div class="modal-sidebar">
+											<h4>Title</h4>
+										</div>
+										<p>Some Content Here about Firmness</p>
+									</div>
+								</div>
+							</div>
+						</div><button type="button">Back to All Products</button>
+						<div class="s-alert-wrapper"></div>
+					</div><!-- Placement v1 -->
+					<!-- end Placement -->
+				</main>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
